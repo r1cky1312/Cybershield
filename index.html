@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberShield | Sviluppo Web & Sicurezza Gestita</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: #0f172a;
+            color: #f1f5f9;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #1e293b;
+            border-bottom: 1px solid #334155;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: #38bdf8;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .cta-btn-nav {
+            background-color: #38bdf8;
+            color: #0f172a;
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .cta-btn-nav:hover {
+            background-color: #7dd3fc;
+        }
+
+        .hero {
+            padding: 80px 5% 60px;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: #f8fafc;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero h1 span {
+            color: #38bdf8;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #94a3b8;
+            margin-bottom: 30px;
+        }
+
+        .btn-main {
+            background-color: #38bdf8;
+            color: #0f172a;
+            padding: 14px 28px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1rem;
+            display: inline-block;
+            margin: 5px;
+        }
+
+        .btn-sec {
+            background-color: #1e293b;
+            color: #38bdf8;
+            border: 2px solid #38bdf8;
+            padding: 12px 26px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1rem;
+            display: inline-block;
+            margin: 5px;
+        }
+
+        .features {
+            padding: 50px 5%;
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            padding: 24px;
+        }
+
+        .card h3 {
+            color: #38bdf8;
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+        }
+
+        .card p {
+            color: #cbd5e1;
+            font-size: 0.95rem;
+        }
+
+        .pricing {
+            padding: 60px 5%;
+            background-color: #0b1120;
+            text-align: center;
+        }
+
+        .pricing-title {
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: #f8fafc;
+        }
+
+        .pricing-grid {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .price-card {
+            background-color: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            padding: 30px;
+            text-align: left;
+        }
+
+        .price-card.featured {
+            border: 2px solid #38bdf8;
+            background-color: #0f2744;
+        }
+
+        .price-card h4 {
+            font-size: 1.3rem;
+            color: #f8fafc;
+        }
+
+        .price {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #38bdf8;
+            margin: 15px 0;
+        }
+
+        .price span {
+            font-size: 0.9rem;
+            color: #94a3b8;
+            font-weight: normal;
+        }
+
+        .price-features {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .price-features li {
+            margin-bottom: 10px;
+            color: #cbd5e1;
+            font-size: 0.9rem;
+        }
+
+        .price-features li::before {
+            content: "✓ ";
+            color: #38bdf8;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #0f172a;
+            border-top: 1px solid #1e293b;
+            text-align: center;
+            padding: 25px 5%;
+            color: #64748b;
+            font-size: 0.85rem;
+        }
+
+        footer p {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">CYBERSHIELD</a>
+        <a href="#contatti" class="cta-btn-nav">Contattaci</a>
+    </header>
+
+    <section class="hero">
+        <h1>Siti Web Veloci e <span>Monitorati H24</span> contro Attacchi e Malware</h1>
+        <p>Non un semplice sito vetrina. Realizziamo e gestiamo l'intera infrastruttura web della tua attività locale, garantendo sicurezza, backup quotidiani e velocità di caricamento.</p>
+        <a href="https://wa.me/393792870887" class="btn-main">Scrivici su WhatsApp</a>
+        <a href="mailto:infocybershield5@gmail.com" class="btn-sec">Invia un'Email</a>
+    </section>
+
+    <section class="features">
+        <div class="card">
+            <h3>Sviluppo Moderno & Mobile</h3>
+            <p>Siti web ottimizzati per smartphone, rapidi da caricare e progettati per convertire i visitatori in clienti per la tua attività.</p>
+        </div>
+        <div class="card">
+            <h3>Scansione Security & Headers</h3>
+            <p>Protezione continuativa contro attacchi XSS, Clickjacking e vulnerabilità note. Il tuo sito sarà protetto 24/7.</p>
+        </div>
+        <div class="card">
+            <h3>Monitoraggio Uptime 24/7</h3>
+            <p>Se il sito va offline o presenta errori, veniamo avvisati istantaneamente e interveniamo subito per ripristinarlo.</p>
+        </div>
+    </section>
+
+    <section class="pricing">
+        <h2 class="pricing-title">Le Nostre Soluzioni</h2>
+        <div class="pricing-grid">
+            <div class="price-card">
+                <h4>Solo Sviluppo</h4>
+                <div class="price">€ 950 <span>una tantum</span></div>
+                <ul class="price-features">
+                    <li>Sito Web responsive su misura</li>
+                    <li>Integrazione contatti e WhatsApp</li>
+                    <li>Ottimizzazione mobile di base</li>
+                </ul>
+            </div>
+            <div class="price-card featured">
+                <h4>All-Inclusive Web & Shield</h4>
+                <div class="price">€ 390 <span>una tantum</span> + € 59 <span>/ mese</span></div>
+                <ul class="price-features">
+                    <li>Sviluppo o Restyling completo INCLUSO</li>
+                    <li>Monitoraggio attivo H24 & Uptime</li>
+                    <li>Protezione vulnerabilità & Header Scan</li>
+                    <li>Backup quotidiani su cloud sicuro</li>
+                    <li>Modifiche minori ai contenuti incluse</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero" id="contatti">
+        <h2>Pronto a Proteggere la Tua Attività?</h2>
+        <p>Contattaci direttamente per richiedere un'analisi gratuita del tuo sito o fissare una chiamata conoscitiva.</p>
+        <a href="https://wa.me/393792870887" class="btn-main">WhatsApp: 379 287 0887</a>
+        <a href="mailto:infocybershield5@gmail.com" class="btn-sec">Email: infocybershield5@gmail.com</a>
+    </section>
+
+    <footer>
+        <p><strong>CyberShield</strong> — Contatti Diretti: Tel/WhatsApp 379 287 0887 | Email: infocybershield5@gmail.com</p>
+        <p>&copy; 2026 CyberShield. Tutti i diritti riservati.</p>
+    </footer>
+
+</body>
+</html>
