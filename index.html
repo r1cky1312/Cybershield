@@ -137,13 +137,12 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-s
 .wa{position:fixed;right:18px;bottom:18px;z-index:60;background:#25d366;color:#052e16;font-weight:800;border-radius:99px;padding:13px 20px;text-decoration:none;box-shadow:0 10px 30px -8px rgba(37,211,102,.6);display:flex;gap:8px;align-items:center;transition:.2s}
 .wa:hover{transform:scale(1.05)}
 
-
 /* esempi prima/dopo */
 .tabs{display:inline-flex;gap:8px;margin:30px 0 22px;padding:6px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
 .tab{background:none;border:0;color:var(--muted);font-family:inherit;font-weight:600;font-size:.95rem;padding:10px 18px;border-radius:10px;cursor:pointer;transition:.2s}
 .tab.on{background:linear-gradient(135deg,var(--accent),#6366f1);color:#04101c}
 .case{display:none}.case.on{display:block}
-.cmp{position:relative;max-width:860px;margin:0 auto;height:430px;border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 70px -30px rgba(0,0,0,.8);--pos:50%;touch-action:pan-y;user-select:none;-webkit-user-select:none;text-align:left}
+.cmp{position:relative;max-width:860px;margin:0 auto;height:450px;border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 70px -30px rgba(0,0,0,.8);--pos:50%;touch-action:pan-y;user-select:none;-webkit-user-select:none;text-align:left}
 .layer{position:absolute;inset:0;overflow:hidden}
 .layer.before{clip-path:inset(0 calc(100% - var(--pos)) 0 0);z-index:2}
 .cmp input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:5;margin:0}
@@ -152,7 +151,8 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-s
 .lab{position:absolute;bottom:14px;z-index:6;font-size:.7rem;font-weight:800;letter-spacing:.1em;padding:5px 11px;border-radius:99px;pointer-events:none}
 .lab.l{left:14px;background:#b91c1c;color:#fff}.lab.r{right:14px;background:#059669;color:#fff}
 .abar{padding:9px 14px;font-family:ui-monospace,Consolas,monospace;font-size:.74rem;display:flex;gap:8px;align-items:center;white-space:nowrap;overflow:hidden}
-.abar.bad{background:#fde2e2;color:#7f1d1d}.abar.good{background:#0f2a22;color:#6ee7b7}
+.abar.bad{background:#fde2e2;color:#7f1d1d}.abar.good{background:#0a192f;color:#38bdf8;border-bottom:1px solid var(--line)}
+
 /* sito "prima" - ristorante */
 .b1{background:#f3e6bd;color:#2b1d00;font-family:'Comic Sans MS','Comic Neue',cursive,sans-serif;height:100%}
 .b1 .t{text-align:center;color:#b00020;font-size:1.45rem;font-weight:700;text-shadow:2px 2px #ffd54a;padding:14px 8px 4px;line-height:1.2}
@@ -160,6 +160,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-s
 .b1 p{font-size:.66rem;line-height:1.25;padding:0 14px;color:#1a1a1a;margin-bottom:6px}
 .b1 .lk{font-size:.7rem;text-align:center;color:#0000ee;text-decoration:underline;padding:6px}
 .b1 .cnt{font-size:.62rem;text-align:center;background:#000;color:#0f0;font-family:monospace;width:150px;margin:8px auto;padding:3px}
+
 /* sito "prima" - parrucchiere */
 .b2{background:#1a0033;color:#ff66cc;font-family:Impact,'Arial Black',sans-serif;height:100%;text-align:center}
 .b2 .t{font-size:1.6rem;color:#39ff14;text-shadow:0 0 6px #39ff14;padding:14px 8px 0;letter-spacing:.04em;line-height:1.15}
@@ -168,41 +169,61 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-s
 .b2 p{font-family:'Times New Roman',serif;font-size:.62rem;color:#bdbdbd;padding:6px 16px;line-height:1.2;text-align:left}
 .b2 .bx{margin:8px auto;width:60%;height:84px;background:linear-gradient(135deg,#4b0082,#8a2be2);display:grid;place-items:center;font-size:.65rem;color:#ddd;filter:blur(1px);border:2px dotted #ff66cc}
 .b2 .lk{font-family:Arial,sans-serif;font-size:.65rem;color:#6cf;text-decoration:underline;padding:4px}
-/* sito "dopo" */
-.a1{background:linear-gradient(160deg,#101a2e,#0b1426);height:100%;color:var(--text)}
-.a1 .nv{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 18px;border-bottom:1px solid var(--line);font-size:.85rem}
-.a1 .nv span{color:var(--muted);font-size:.72rem}
-.a1 .hr{padding:24px 18px 14px}
-.a1 h4{font-size:1.5rem;line-height:1.15;margin-bottom:6px;letter-spacing:-.02em}
-.a1 h4 em{font-style:normal;color:var(--accent)}
-.a1 .hr p{color:var(--muted);font-size:.82rem;margin-bottom:14px}
-.a1 .bt{display:flex;gap:8px;flex-wrap:wrap}
-.a1 .bt span{padding:8px 13px;border-radius:9px;font-size:.76rem;font-weight:700}
-.a1 .bt .p{background:var(--accent);color:#04101c}.a1 .bt .g{background:#25d366;color:#052e16}.a1 .bt .o{border:1px solid var(--line)}
-.a1 .cd{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:6px 18px 16px}
-.a1 .cd div{background:#0f1b33;border:1px solid var(--line);border-radius:10px;padding:10px;font-size:.72rem}
-.a1 .cd b{display:block;margin-bottom:2px}.a1 .cd small{color:var(--muted)}
+
+/* SITI DOPO - DESIGN COLORATO E VIVIDO */
+.a-ristorante{background:linear-gradient(145deg, #1c0a00, #361204, #0b1220);height:100%;color:#fff;padding-bottom:20px}
+.a-ristorante .nv{display:flex;justify-content:space-between;align-items:center;padding:12px 18px;background:rgba(0,0,0,.4);border-bottom:1px solid rgba(251,146,60,.2)}
+.a-ristorante .nv b{font-size:1.05rem;color:#ffedd5;letter-spacing:.02em}
+.a-ristorante .hr{padding:22px 18px 12px;background:radial-gradient(circle at top right, rgba(249,115,22,.25), transparent 60%)}
+.a-ristorante h4{font-size:1.55rem;line-height:1.2;color:#fff;margin-bottom:8px}
+.a-ristorante h4 span{color:#f97316;background:linear-gradient(120deg,#f97316,#facc15);-webkit-background-clip:text;background-clip:text;color:transparent}
+.a-ristorante p{color:#fdba74;font-size:.84rem;margin-bottom:16px}
+.a-ristorante .bt{display:flex;gap:10px;flex-wrap:wrap}
+.a-ristorante .bt span{padding:8px 14px;border-radius:10px;font-size:.78rem;font-weight:700;display:inline-flex;align-items:center;gap:6px}
+.a-ristorante .bt .p{background:linear-gradient(135deg,#ea580c,#f97316);color:#fff;box-shadow:0 4px 14px rgba(234,88,12,.4)}
+.a-ristorante .bt .g{background:#25d366;color:#052e16;box-shadow:0 4px 14px rgba(37,211,102,.3)}
+.a-ristorante .bt .o{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);color:#fff}
+.a-ristorante .cd{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:12px 18px}
+.a-ristorante .cd div{background:rgba(255,255,255,.05);border:1px solid rgba(249,115,22,.2);border-radius:12px;padding:10px;font-size:.74rem}
+.a-ristorante .cd b{display:block;color:#ffedd5;margin-bottom:2px}.a-ristorante .cd small{color:#fdba74}
+
+.a-salone{background:linear-gradient(145deg, #18002e, #32004f, #070b14);height:100%;color:#fff;padding-bottom:20px}
+.a-salone .nv{display:flex;justify-content:space-between;align-items:center;padding:12px 18px;background:rgba(0,0,0,.4);border-bottom:1px solid rgba(217,70,239,.2)}
+.a-salone .nv b{font-size:1.05rem;color:#fae8ff;letter-spacing:.02em}
+.a-salone .hr{padding:22px 18px 12px;background:radial-gradient(circle at top right, rgba(217,70,239,.3), transparent 60%)}
+.a-salone h4{font-size:1.55rem;line-height:1.2;color:#fff;margin-bottom:8px}
+.a-salone h4 span{background:linear-gradient(120deg,#e879f9,#38bdf8);-webkit-background-clip:text;background-clip:text;color:transparent}
+.a-salone p{color:#f5d0fe;font-size:.84rem;margin-bottom:16px}
+.a-salone .bt{display:flex;gap:10px;flex-wrap:wrap}
+.a-salone .bt span{padding:8px 14px;border-radius:10px;font-size:.78rem;font-weight:700;display:inline-flex;align-items:center;gap:6px}
+.a-salone .bt .p{background:linear-gradient(135deg,#c026d3,#d946ef);color:#fff;box-shadow:0 4px 14px rgba(217,70,239,.4)}
+.a-salone .bt .g{background:#25d366;color:#052e16;box-shadow:0 4px 14px rgba(37,211,102,.3)}
+.a-salone .bt .o{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);color:#fff}
+.a-salone .cd{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:12px 18px}
+.a-salone .cd div{background:rgba(255,255,255,.05);border:1px solid rgba(217,70,239,.2);border-radius:12px;padding:10px;font-size:.74rem}
+.a-salone .cd b{display:block;color:#fae8ff;margin-bottom:2px}.a-salone .cd small{color:#f5d0fe}
+
 .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;max-width:860px;margin:18px auto 0;text-align:left}
 .stats div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
 .stats small{display:block;color:var(--muted);font-size:.76rem}
 .stats b{font-size:.98rem}.stats s{color:var(--warn)}
 .fine{color:var(--muted);font-size:.82rem;max-width:760px;margin:18px auto 0}
-.hint{color:var(--muted);font-size:.85rem;margin-top:12px}
-/* fiducia e recensioni */
-.rev{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;text-align:left}
-.rev .st{color:#fbbf24;letter-spacing:.1em;margin-bottom:10px}
-.rev p{color:#cdd8ee;font-size:.97rem;margin-bottom:14px}
-.rev b{display:block}.rev small{color:var(--muted)}
-.first{margin-top:34px;display:grid;gap:12px;justify-items:center;text-align:center;background:linear-gradient(135deg,#0f2240,#14143a);border:1px solid rgba(99,102,241,.4);border-radius:24px;padding:40px 26px}
-.first p{color:var(--muted);max-width:640px}
 
-/* reveal */
+/* scanner section */
+.scan-box{background:#050812;border:1px solid var(--line);border-radius:20px;padding:28px;margin-top:36px;box-shadow:0 20px 50px rgba(0,0,0,.6)}
+.scan-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center;text-align:left}
+.scan-term{background:#02040a;border:1px solid #1a263d;border-radius:12px;padding:18px;font-family:ui-monospace,Consolas,monospace;font-size:.8rem;color:#a5f3fc}
+.scan-term .cmd{color:#38bdf8;font-weight:700}
+.scan-term .ok{color:#34d399}
+.scan-term .warn{color:#facc15}
+.scan-term .bad{color:#f87171}
+
 .rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
 .rv.in{opacity:1;transform:none}
 
 @media(max-width:860px){
   section{padding:62px 0}
-  .hero-grid,.audit{grid-template-columns:1fr}
+  .hero-grid,.audit,.scan-grid{grid-template-columns:1fr}
   .audit{padding:30px 22px}
   .burger{display:block}
   nav ul{display:none;position:absolute;top:68px;left:0;right:0;background:var(--bg2);border-bottom:1px solid var(--line);flex-direction:column;padding:20px;gap:18px;align-items:flex-start}
@@ -224,7 +245,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-s
       <button class="burger" id="burger" aria-label="Menu">☰</button>
       <ul id="menu">
         <li><a href="#problema">Perché</a></li>
-        <li><a href="#come">Come funziona</a></li>
+        <li><a href="#scanner">Sicurezza Tool</a></li>
         <li><a href="#esempi">Esempi</a></li>
         <li><a href="#prezzi">Prezzi</a></li>
         <li><a href="#faq">FAQ</a></li>
@@ -273,88 +294,72 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-s
   </div>
 </section>
 
-<!-- PROBLEMA -->
-<section class="problem" id="problema">
+<!-- SEZIONE SCANNER / SICUREZZA TOOL -->
+<section id="scanner" class="problem">
   <div class="wrap center">
-    <span class="eyebrow">Il problema</span>
-    <h2>Un sito trascurato costa più di uno curato</h2>
-    <p class="lead">Molte piccole attività scoprono di avere un problema solo quando il sito è già fuori uso o i clienti non lo trovano più.</p>
-    <div class="grid3" style="text-align:left">
-      <div class="card rv">
-        <div class="stat">1 su 2</div>
-        <h3>Visitatori da mobile che abbandonano</h3>
-        <p>Se il sito impiega troppo a caricarsi sullo smartphone, il cliente passa al concorrente. Velocità = chiamate e prenotazioni.</p>
-      </div>
-      <div class="card rv">
-        <div class="stat">Zero</div>
-        <h3>Backup quando serve davvero</h3>
-        <p>Un aggiornamento sbagliato o un attacco e il sito sparisce. Senza copie recenti si riparte da capo, a pagamento.</p>
-      </div>
-      <div class="card rv">
-        <div class="stat">Ogni giorno</div>
-        <h3>Bot che cercano siti vulnerabili</h3>
-        <p>Non serve essere famosi: i siti con software vecchio e senza protezioni vengono scansionati in automatico di continuo.</p>
+    <span class="eyebrow">Tecnologia CyberShield</span>
+    <h2>Come analizziamo e proteggiamo il tuo sito</h2>
+    <p class="lead">Utilizziamo il nostro scanner automatico passivo per trovare falle prima dei malintenzionati, senza rallentare il tuo server.</p>
+    
+    <div class="scan-box rv">
+      <div class="scan-grid">
+        <div class="scan-term">
+          <div class="cmd">$ python3 scanner_2.py tuosito.it</div>
+          <div style="margin:10px 0;color:#64748b">================================================</div>
+          <div>[<span class="ok">OK</span>] HTTPS / SSL: Certificato valido (TLS 1.3)</div>
+          <div>[<span class="bad">XX</span>] Header: Content-Security-Policy MANCANTE</div>
+          <div>[<span class="bad">XX</span>] Header: X-Frame-Options (Clickjacking) ASSENTE</div>
+          <div>[<span class="warn">!!</span>] Cookie: Flag Secure/HttpOnly mancante</div>
+          <div>[<span class="ok">OK</span>] Mobile: Meta viewport presente</div>
+          <div>[<span class="warn">!!</span>] Velocità: 3.8s (Risposta da migliorare)</div>
+          <div style="margin-top:12px;color:#38bdf8;font-weight:bold">→ Punteggio: 62/100 (Voto C) - 3 vulnerabilità trovate</div>
+        </div>
+        <div>
+          <h3 style="font-size:1.3rem;margin-bottom:12px;color:var(--text)">Cosa fa il nostro sistema per te:</h3>
+          <ul style="list-style:none;display:grid;gap:12px">
+            <li style="display:flex;gap:10px"><span style="color:var(--accent2);font-weight:bold">1.</span> <span><b>Scansione Passiva Sicura:</b> Analizziamo la salute del tuo sito come farebbe un browser, senza rischi di blocco.</span></li>
+            <li style="display:flex;gap:10px"><span style="color:var(--accent2);font-weight:bold">2.</span> <span><b>Blocco Vulnerabilità:</b> Impostiamo gli header necessari per impedire il furto di dati e attacchi malware.</span></li>
+            <li style="display:flex;gap:10px"><span style="color:var(--accent2);font-weight:bold">3.</span> <span><b>Monitoraggio H24:</b> Se il sito va giù o il certificato SSL scade, interveniamo subito.</span></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- COSA FACCIAMO -->
-<section id="servizi">
-  <div class="wrap center">
-    <span class="eyebrow">Cosa facciamo</span>
-    <h2>Tutto il necessario, in un solo posto</h2>
-    <p class="lead">Un unico referente per sito, sicurezza e visibilità locale.</p>
-    <div class="grid3" style="text-align:left">
-      <div class="card rv"><div class="ico">⚡</div><h3>Sito veloce e responsive</h3><p>Pagine leggere, pensate per smartphone, con pulsanti per chiamare, scrivere su WhatsApp e raggiungerti con le indicazioni stradali.</p></div>
-      <div class="card rv"><div class="ico">🛡️</div><h3>Sicurezza e backup</h3><p>HTTPS, header di sicurezza, aggiornamenti e backup regolari. Se qualcosa si rompe, ripristiniamo noi.</p></div>
-      <div class="card rv"><div class="ico">📡</div><h3>Controllo online automatico</h3><p>Un sistema verifica ogni pochi minuti che il sito risponda. Se va giù, ti avvisiamo e interveniamo.</p></div>
-      <div class="card rv"><div class="ico">📍</div><h3>Google Business Profile</h3><p>Scheda ottimizzata con foto, orari e descrizione per comparire meglio su Google Maps nella tua zona.</p></div>
-      <div class="card rv"><div class="ico">🔎</div><h3>Audit del sito esistente</h3><p>Hai già un sito? Lo analizziamo e ti mostriamo, in modo semplice, cosa non va e come sistemarlo.</p></div>
-      <div class="card rv"><div class="ico">🛒</div><h3>Vendita online</h3><p>Un piccolo e-commerce con pagamenti sicuri per prodotti tipici, vini o servizi prenotabili.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- COME FUNZIONA -->
-<section class="problem" id="come">
-  <div class="wrap center">
-    <span class="eyebrow">Come funziona</span>
-    <h2>Dalla prima chiamata al sito online in pochi giorni</h2>
-    <div class="steps" style="text-align:left">
-      <div class="step rv"><h3>Ci scrivi</h3><p>Un messaggio su WhatsApp o un'email. Nessun modulo lungo, nessun impegno.</p></div>
-      <div class="step rv"><h3>Analisi gratuita</h3><p>Guardiamo il tuo sito (o la tua scheda Google) e ti diciamo cosa migliorare.</p></div>
-      <div class="step rv"><h3>Preventivo chiaro</h3><p>Una proposta scritta con prezzo fisso. Se non ti convince, resti amico lo stesso.</p></div>
-      <div class="step rv"><h3>Online e curato</h3><p>Pubblichiamo il sito e ci occupiamo di tutto il resto, mese dopo mese.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ESEMPI PRIMA / DOPO -->
+<!-- ESEMPI PRIMA / DOPO CON NUOVO DESIGN VIVIDO -->
 <section id="esempi">
   <div class="wrap center">
     <span class="eyebrow">Prima e dopo</span>
-    <h2>Come cambia un sito trascurato</h2>
-    <p class="lead">Due esempi dimostrativi, con attività inventate, per farti vedere che tipo di intervento facciamo. Trascina la linea per confrontare.</p>
+    <h2>Come trasforniamo il tuo sito</h2>
+    <p class="lead">Confronta la differenza tra un sito trascurato e uno ottimizzato, veloce e ultra-colorato firmato CyberShield.</p>
 
     <div class="tabs" role="tablist" aria-label="Scegli l'esempio">
       <button class="tab on" role="tab" aria-selected="true" data-case="a">🍝 Ristorante</button>
       <button class="tab" role="tab" aria-selected="false" data-case="b">✂️ Parrucchiere</button>
     </div>
 
-    <!-- caso A -->
+    <!-- caso A: RISTORANTE -->
     <div class="case on" id="case-a">
       <div class="cmp">
         <div class="layer after">
-          <div class="abar good">🔒 trattoriaesempio.it</div>
-          <div class="a1">
-            <div class="nv"><b>Trattoria Esempio</b><span>Menù · Orari · Dove siamo</span></div>
+          <div class="abar good">🔒 trattoriaesempio.it — Protetta da CyberShield</div>
+          <div class="a-ristorante">
+            <div class="nv"><b>Trattoria Esempio</b><span style="color:#fdba74;font-size:.75rem">Cucina Tipica · Torino</span></div>
             <div class="hr">
-              <h4>Cucina tipica, <em>a due passi da te</em></h4>
-              <p>Aperti ogni giorno 12–15 e 19–23. Prenota con un tocco.</p>
-              <div class="bt"><span class="p">📞 Chiama</span><span class="g">💬 WhatsApp</span><span class="o">📍 Indicazioni</span></div>
+              <h4>Gusto autentico, <span>senza attese</span></h4>
+              <p>Menù del giorno aggiornato. Aperti a pranzo e cena.</p>
+              <div class="bt">
+                <span class="p">📞 Riserva Tavolo</span>
+                <span class="g">💬 WhatsApp</span>
+                <span class="o">📍 Mappa</span>
+              </div>
             </div>
-            <div class="cd"><div><b>Antipasti</b><small>menù aggiornato</small></div><div><b>Primi</b><small>pasta fresca</small></div><div><b>Dolci</b><small>fatti in casa</small></div></div>
+            <div class="cd">
+              <div><b>Antipasti</b><small>Taglieri & Focacce</small></div>
+              <div><b>Primi Freschi</b><small>Pasta fatta in casa</small></div>
+              <div><b>Dolci</b><small>Specialità dello chef</small></div>
+            </div>
           </div>
         </div>
         <div class="layer before">
@@ -362,7 +367,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-s
           <div class="b1">
             <div class="t">~*~ BENVENUTI ~*~<br>TRATTORIA ESEMPIO</div>
             <div class="ph">[ foto sfocata ]</div>
-            <p>Siamo aperti dal 1987 siamo un ristorante con cucina tipica e pizza e anche asporto chiamare al numero 011 000000 oppure scrivere via mail al indirizzo trattoria@esempio.it  --- PAGINA IN COSTRUZIONE ---</p>
+            <p>Siamo aperti dal 1987 siamo un ristorante con cucina tipica e pizza e anche asporto chiamare al numero 011 000000 oppure scrivere via mail al indirizzo trattoria@esempio.it --- PAGINA IN COSTRUZIONE ---</p>
             <div class="lk">MENU (scarica il PDF 4 MB) | ORARI | CONTATTI</div>
             <div class="cnt">Visitatori: 000412</div>
           </div>
@@ -372,26 +377,34 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-s
         <input type="range" min="0" max="100" value="50" aria-label="Confronta prima e dopo">
       </div>
       <div class="stats">
-        <div><small>Caricamento da mobile</small><b><s>6,2 s</s> → <span class="ok">1,1 s</span></b></div>
-        <div><small>Connessione sicura</small><b><s>No</s> → <span class="ok">Sì (HTTPS)</span></b></div>
-        <div><small>Chiamata / WhatsApp</small><b><s>Nessun pulsante</s> → <span class="ok">1 tocco</span></b></div>
-        <div><small>Menù</small><b><s>PDF da 4 MB</s> → <span class="ok">Pagina veloce</span></b></div>
+        <div><small>Caricamento mobile</small><b><s>6,2 s</s> → <span class="ok">1,1 s</span></b></div>
+        <div><small>Connessione SSL</small><b><s>No</s> → <span class="ok">Sì (HTTPS)</span></b></div>
+        <div><small>Chiamata / WhatsApp</small><b><s>Assente</s> → <span class="ok">1 Tocco</span></b></div>
+        <div><small>Menù</small><b><s>PDF 4 MB</s> → <span class="ok">Interattivo</span></b></div>
       </div>
     </div>
 
-    <!-- caso B -->
+    <!-- caso B: PARRUCCHIERE -->
     <div class="case" id="case-b">
       <div class="cmp">
         <div class="layer after">
-          <div class="abar good">🔒 saloneesempio.it</div>
-          <div class="a1">
-            <div class="nv"><b>Salone Esempio</b><span>Servizi · Prezzi · Prenota</span></div>
+          <div class="abar good">🔒 saloneesempio.it — Protetta da CyberShield</div>
+          <div class="a-salone">
+            <div class="nv"><b>Salone Esempio</b><span style="color:#f5d0fe;font-size:.75rem">Parrucchieri & Style</span></div>
             <div class="hr">
-              <h4>Il tuo taglio, <em>senza attese</em></h4>
-              <p>Prenota su WhatsApp in pochi secondi. Orari e prezzi sempre aggiornati.</p>
-              <div class="bt"><span class="p">📅 Prenota</span><span class="g">💬 WhatsApp</span><span class="o">📍 Come arrivare</span></div>
+              <h4>Il tuo look, <span>il tuo stile</span></h4>
+              <p>Prenotazioni rapide via WhatsApp. Consulta il listino prezzi.</p>
+              <div class="bt">
+                <span class="p">📅 Prenota Ora</span>
+                <span class="g">💬 WhatsApp</span>
+                <span class="o">📍 Come Arrivare</span>
+              </div>
             </div>
-            <div class="cd"><div><b>Taglio</b><small>prezzo chiaro</small></div><div><b>Colore</b><small>su consulenza</small></div><div><b>Barba</b><small>su appuntamento</small></div></div>
+            <div class="cd">
+              <div><b>Taglio & Piega</b><small>Servizio Donna/Uomo</small></div>
+              <div><b>Colore & Balayage</b><small>Consulenza inclusa</small></div>
+              <div><b>Trattamenti</b><small>Ristrutturanti VIP</small></div>
+            </div>
           </div>
         </div>
         <div class="layer before">
@@ -409,39 +422,14 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-s
         <input type="range" min="0" max="100" value="50" aria-label="Confronta prima e dopo">
       </div>
       <div class="stats">
-        <div><small>Caricamento da mobile</small><b><s>5,4 s</s> → <span class="ok">1,0 s</span></b></div>
+        <div><small>Caricamento mobile</small><b><s>5,4 s</s> → <span class="ok">1,0 s</span></b></div>
         <div><small>Prenotazione</small><b><s>Solo telefono</s> → <span class="ok">WhatsApp</span></b></div>
         <div><small>Prezzi e orari</small><b><s>Non visibili</s> → <span class="ok">Chiari</span></b></div>
-        <div><small>Pagine rotte</small><b><s>2 (errore 404)</s> → <span class="ok">0</span></b></div>
+        <div><small>Pagine rotte</small><b><s>2 errori 404</s> → <span class="ok">0</span></b></div>
       </div>
     </div>
 
-    <p class="fine"><strong>Nota onesta:</strong> sono esempi dimostrativi, con attività e valori inventati per illustrare il tipo di intervento. Non sono clienti reali. I primi casi veri, con il consenso dei clienti, li pubblicheremo qui.</p>
-  </div>
-</section>
-
-<!-- FIDUCIA E CLIENTI -->
-<section class="problem" id="clienti">
-  <div class="wrap center">
-    <span class="eyebrow">Perché fidarti</span>
-    <h2>Siamo nuovi, quindi ti diamo garanzie concrete</h2>
-    <p class="lead">Non hai bisogno di crederci sulla parola: ogni punto qui sotto lo trovi scritto nel preventivo.</p>
-    <div class="grid3" style="text-align:left;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
-      <div class="card rv"><div class="ico">💶</div><h3>Prezzo fisso, scritto prima</h3><p>Ricevi un preventivo scritto: quello che leggi è quello che paghi. Nessun costo a sorpresa.</p></div>
-      <div class="card rv"><div class="ico">🔓</div><h3>Il sito è tuo</h3><p>File e dominio restano a tuo nome. Se vuoi andartene ti aiutiamo nel passaggio.</p></div>
-      <div class="card rv"><div class="ico">🔎</div><h3>Prima vedi, poi decidi</h3><p>L'analisi e il report iniziale sono gratuiti e senza impegno.</p></div>
-      <div class="card rv"><div class="ico">💬</div><h3>Parli con chi lavora</h3><p>Rispondiamo su WhatsApp, di solito in giornata. Niente call center, niente ticket.</p></div>
-    </div>
-
-    <!-- Recensioni: compaiono solo se aggiungi recensioni VERE nell'elenco RECENSIONI (vedi script in fondo). -->
-    <div id="recensioni" class="grid3" style="text-align:left" hidden></div>
-
-    <div class="first rv" id="primi">
-      <span class="eyebrow" style="margin:0">Stiamo partendo</span>
-      <h3 style="font-size:1.6rem">Cerchiamo i primi clienti a Torino</h3>
-      <p>Siamo una realtà nuova e non abbiamo ancora recensioni da mostrarti: preferiamo dirtelo piuttosto che inventarle. Per i primi lavori riserviamo condizioni dedicate, in cambio del permesso di mostrare il risultato come caso di studio. Scrivici per i dettagli.</p>
-      <a class="btn btn-primary" href="https://wa.me/393792870887?text=Ciao%2C%20vorrei%20info%20sulle%20condizioni%20per%20i%20primi%20clienti.">💬 Voglio le condizioni per i primi clienti</a>
-    </div>
+    <p class="fine"><strong>Nota trasparente:</strong> gli Esempi "Prima" illustrano siti datati tipici riscontrati durante le nostre analisi, mentre gli Esempi "Dopo" mostrano lo standard di qualità applicato da CyberShield.</p>
   </div>
 </section>
 
@@ -587,29 +575,28 @@ menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classL
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 
-// animated score
+// score animation
 (function(){
   const n=document.getElementById('scoreNum'),b=document.getElementById('scoreBar');
   const target=94;let cur=0;
-  setTimeout(()=>{b.style.width=target+'%';
-    const t=setInterval(()=>{cur++;n.textContent=cur;if(cur>=target)clearInterval(t)},16);
+  setTimeout(()=>{if(b)b.style.width=target+'%';
+    const t=setInterval(()=>{cur++;if(n)n.textContent=cur;if(cur>=target)clearInterval(t)},16);
   },500);
 })();
 
-// tab degli esempi prima/dopo
+// tab prima/dopo
 document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{
   document.querySelectorAll('.tab').forEach(x=>{const on=x===t;x.classList.toggle('on',on);x.setAttribute('aria-selected',on)});
   document.querySelectorAll('.case').forEach(c=>c.classList.toggle('on',c.id==='case-'+t.dataset.case));
 }));
 
-// cursore prima/dopo
+// slider prima/dopo
 document.querySelectorAll('.cmp').forEach(c=>{
   const r=c.querySelector('input');
   const set=()=>c.style.setProperty('--pos',r.value+'%');
   let toccato=false;
   ['pointerdown','keydown','input'].forEach(ev=>r.addEventListener(ev,()=>{toccato=true}));
   r.addEventListener('input',set);set();
-  // piccolo movimento iniziale per far capire che si può trascinare (non con "riduci animazioni")
   if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
   const vis=new IntersectionObserver(es=>{
     if(!es[0].isIntersecting)return;vis.disconnect();
@@ -623,33 +610,6 @@ document.querySelectorAll('.cmp').forEach(c=>{
   },{threshold:.6});
   vis.observe(c);
 });
-
-// RECENSIONI: aggiungi qui SOLO recensioni vere, scritte da clienti reali e con il loro consenso.
-// Finché l'elenco è vuoto, la sezione resta nascosta e compare il messaggio "Cerchiamo i primi clienti".
-// Formato: {nome:"Mario R.", attivita:"Nome attività", testo:"Testo della recensione", stelle:5, data:"novembre 2026"}
-const RECENSIONI=[];
-(function(){
-  const box=document.getElementById('recensioni');
-  if(!RECENSIONI.length||!box)return;
-  RECENSIONI.forEach(r=>{
-    const d=document.createElement('div');d.className='rev';
-    const st=document.createElement('div');st.className='st';
-    const n=Math.max(1,Math.min(5,parseInt(r.stelle,10)||5));
-    st.textContent='★'.repeat(n)+'☆'.repeat(5-n);
-    const p=document.createElement('p');p.textContent='“'+r.testo+'”';
-    const b=document.createElement('b');b.textContent=r.nome;
-    const s=document.createElement('small');s.textContent=[r.attivita,r.data].filter(Boolean).join(' · ');
-    d.append(st,p,b,s);box.append(d);
-  });
-  box.hidden=false;
-  const primi=document.getElementById('primi');if(primi)primi.style.display='none';
-})();
-
-// piano scelto -> messaggio WhatsApp precompilato
-document.querySelectorAll('[data-plan]').forEach(a=>a.addEventListener('click',()=>{
-  const msg=encodeURIComponent('Ciao, sono interessato al piano "'+a.dataset.plan+'". Possiamo parlarne?');
-  document.getElementById('waMain').href='https://wa.me/393792870887?text='+msg;
-}));
 </script>
 </body>
 </html>
