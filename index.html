@@ -146,16 +146,16 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-s
 .tab{background:none;border:0;color:var(--muted);font-family:inherit;font-weight:600;font-size:.95rem;padding:10px 18px;border-radius:10px;cursor:pointer;transition:.2s}
 .tab.on{background:linear-gradient(135deg,var(--accent),#6366f1);color:#04101c}
 .case{display:none}.case.on{display:block}
-.cmp{position:relative;max-width:860px;margin:0 auto;height:430px;border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 70px -30px rgba(0,0,0,.8);--pos:50%;touch-action:pan-y;user-select:none;-webkit-user-select:none;text-align:left}
+.cmp{position:relative;max-width:860px;margin:0 auto;height:430px;border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px -26px rgba(56,189,248,.35),0 0 0 1px rgba(99,102,241,.35);--pos:50%;touch-action:pan-y;user-select:none;-webkit-user-select:none;text-align:left}
 .layer{position:absolute;inset:0;overflow:hidden}
 .layer.before{clip-path:inset(0 calc(100% - var(--pos)) 0 0);z-index:2}
 .cmp input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:5;margin:0}
-.handle{position:absolute;top:0;bottom:0;left:var(--pos);width:3px;background:#fff;z-index:4;transform:translateX(-50%);pointer-events:none;box-shadow:0 0 14px rgba(0,0,0,.5)}
-.handle::after{content:"↔";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:38px;height:38px;border-radius:50%;background:#fff;color:#0b1220;display:grid;place-items:center;font-weight:800;box-shadow:0 6px 18px rgba(0,0,0,.45)}
+.handle{position:absolute;top:0;bottom:0;left:var(--pos);width:4px;background:linear-gradient(180deg,#38bdf8,#6366f1,#22d3a6);z-index:4;transform:translateX(-50%);pointer-events:none;box-shadow:0 0 14px rgba(0,0,0,.5)}
+.handle::after{content:"↔";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,#38bdf8,#6366f1);color:#fff;border:3px solid #fff;font-size:1.1rem;display:grid;place-items:center;font-weight:800;box-shadow:0 6px 18px rgba(0,0,0,.45)}
 .lab{position:absolute;bottom:14px;z-index:6;font-size:.7rem;font-weight:800;letter-spacing:.1em;padding:5px 11px;border-radius:99px;pointer-events:none}
-.lab.l{left:14px;background:#b91c1c;color:#fff}.lab.r{right:14px;background:#059669;color:#fff}
+.lab.l{left:14px;background:#b91c1c;color:#fff}.lab.r{right:14px;background:linear-gradient(135deg,#22d3a6,#38bdf8);color:#04101c}
 .abar{padding:9px 14px;font-family:ui-monospace,Consolas,monospace;font-size:.74rem;display:flex;gap:8px;align-items:center;white-space:nowrap;overflow:hidden}
-.abar.bad{background:#fde2e2;color:#7f1d1d}.abar.good{background:#0f2a22;color:#6ee7b7}
+.abar.bad{background:#fde2e2;color:#7f1d1d}.abar.good{background:linear-gradient(90deg,#064e3b,#0f2a22);color:#6ee7b7}
 /* sito "prima" - ristorante */
 .b1{background:#f3e6bd;color:#2b1d00;font-family:'Comic Sans MS','Comic Neue',cursive,sans-serif;height:100%}
 .b1 .t{text-align:center;color:#b00020;font-size:1.45rem;font-weight:700;text-shadow:2px 2px #ffd54a;padding:14px 8px 4px;line-height:1.2}
@@ -172,19 +172,28 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-s
 .b2 .bx{margin:8px auto;width:60%;height:84px;background:linear-gradient(135deg,#4b0082,#8a2be2);display:grid;place-items:center;font-size:.65rem;color:#ddd;filter:blur(1px);border:2px dotted #ff66cc}
 .b2 .lk{font-family:Arial,sans-serif;font-size:.65rem;color:#6cf;text-decoration:underline;padding:4px}
 /* sito "dopo" */
-.a1{background:linear-gradient(160deg,#101a2e,#0b1426);height:100%;color:var(--text)}
-.a1 .nv{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 18px;border-bottom:1px solid var(--line);font-size:.85rem}
-.a1 .nv span{color:var(--muted);font-size:.72rem}
-.a1 .hr{padding:24px 18px 14px}
-.a1 h4{font-size:1.5rem;line-height:1.15;margin-bottom:6px;letter-spacing:-.02em}
-.a1 h4 em{font-style:normal;color:var(--accent)}
-.a1 .hr p{color:var(--muted);font-size:.82rem;margin-bottom:14px}
+.a1{position:relative;background:radial-gradient(120% 90% at 85% -10%,rgba(99,102,241,.55),transparent 55%),radial-gradient(90% 80% at -10% 110%,rgba(34,211,166,.35),transparent 55%),linear-gradient(160deg,#0f2447,#0a1226);height:100%;color:var(--text);overflow:hidden}
+.a1::before{content:"";position:absolute;width:260px;height:260px;right:-70px;top:40px;border-radius:50%;background:conic-gradient(from 200deg,#38bdf8,#6366f1,#22d3a6,#38bdf8);filter:blur(46px);opacity:.38;animation:spinA 14s linear infinite}
+@keyframes spinA{to{transform:rotate(360deg)}}
+.a1>*{position:relative}
+.a1 .nv{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 18px;border-bottom:1px solid rgba(148,163,184,.22);font-size:.85rem;background:rgba(7,11,20,.45);backdrop-filter:blur(6px)}
+.a1 .nv b{background:linear-gradient(90deg,#38bdf8,#22d3a6);-webkit-background-clip:text;background-clip:text;color:transparent;font-size:1rem}
+.a1 .nv span{color:#b7c6e2;font-size:.72rem}
+.a1 .hr{padding:26px 18px 14px}
+.a1 h4{font-size:1.75rem;line-height:1.12;margin-bottom:8px;letter-spacing:-.02em}
+.a1 h4 em{font-style:normal;background:linear-gradient(90deg,#38bdf8,#22d3a6);-webkit-background-clip:text;background-clip:text;color:transparent}
+.a1 .hr p{color:#c3d0e8;font-size:.86rem;margin-bottom:16px;max-width:430px}
 .a1 .bt{display:flex;gap:8px;flex-wrap:wrap}
-.a1 .bt span{padding:8px 13px;border-radius:9px;font-size:.76rem;font-weight:700}
-.a1 .bt .p{background:var(--accent);color:#04101c}.a1 .bt .g{background:#25d366;color:#052e16}.a1 .bt .o{border:1px solid var(--line)}
-.a1 .cd{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:6px 18px 16px}
-.a1 .cd div{background:#0f1b33;border:1px solid var(--line);border-radius:10px;padding:10px;font-size:.72rem}
-.a1 .cd b{display:block;margin-bottom:2px}.a1 .cd small{color:var(--muted)}
+.a1 .bt span{padding:10px 15px;border-radius:10px;font-size:.78rem;font-weight:800}
+.a1 .bt .p{background:linear-gradient(135deg,#38bdf8,#6366f1);color:#fff;box-shadow:0 8px 20px -8px rgba(56,189,248,.8)}
+.a1 .bt .g{background:#25d366;color:#052e16;box-shadow:0 8px 20px -8px rgba(37,211,102,.8)}
+.a1 .bt .o{border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.07)}
+.a1 .cd{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:8px 18px 16px}
+.a1 .cd div{border-radius:14px;padding:12px;font-size:.74rem;background:linear-gradient(160deg,rgba(255,255,255,.12),rgba(255,255,255,.04));border:1px solid rgba(255,255,255,.18);box-shadow:0 10px 24px -14px rgba(0,0,0,.8)}
+.a1 .cd div:nth-child(1){border-top:3px solid #38bdf8}.a1 .cd div:nth-child(2){border-top:3px solid #818cf8}.a1 .cd div:nth-child(3){border-top:3px solid #22d3a6}
+.a1 .cd i{display:block;font-style:normal;font-size:1.35rem;margin-bottom:4px}
+.a1 .cd b{display:block;margin-bottom:2px;font-size:.82rem}.a1 .cd small{color:#b7c6e2}
+.a1 .rt{display:inline-flex;gap:6px;align-items:center;margin-bottom:12px;padding:5px 11px;border-radius:99px;background:rgba(34,211,166,.16);border:1px solid rgba(34,211,166,.45);color:#86efac;font-size:.72rem;font-weight:700}
 .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;max-width:860px;margin:18px auto 0;text-align:left}
 .stats div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
 .stats small{display:block;color:var(--muted);font-size:.76rem}
@@ -434,11 +443,12 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-s
           <div class="a1">
             <div class="nv"><b>Trattoria Esempio</b><span>Menù · Orari · Dove siamo</span></div>
             <div class="hr">
+              <div class="rt">⚡ Si carica in 1 secondo · 🔒 Sicuro</div>
               <h4>Cucina tipica, <em>a due passi da te</em></h4>
               <p>Aperti ogni giorno 12–15 e 19–23. Prenota con un tocco.</p>
               <div class="bt"><span class="p">📞 Chiama</span><span class="g">💬 WhatsApp</span><span class="o">📍 Indicazioni</span></div>
             </div>
-            <div class="cd"><div><b>Antipasti</b><small>menù aggiornato</small></div><div><b>Primi</b><small>pasta fresca</small></div><div><b>Dolci</b><small>fatti in casa</small></div></div>
+            <div class="cd"><div><i>🥗</i><b>Antipasti</b><small>menù aggiornato</small></div><div><i>🍝</i><b>Primi</b><small>pasta fresca</small></div><div><i>🍰</i><b>Dolci</b><small>fatti in casa</small></div></div>
           </div>
         </div>
         <div class="layer before">
@@ -471,11 +481,12 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-s
           <div class="a1">
             <div class="nv"><b>Salone Esempio</b><span>Servizi · Prezzi · Prenota</span></div>
             <div class="hr">
+              <div class="rt">⚡ Si carica in 1 secondo · 🔒 Sicuro</div>
               <h4>Il tuo taglio, <em>senza attese</em></h4>
               <p>Prenota su WhatsApp in pochi secondi. Orari e prezzi sempre aggiornati.</p>
               <div class="bt"><span class="p">📅 Prenota</span><span class="g">💬 WhatsApp</span><span class="o">📍 Come arrivare</span></div>
             </div>
-            <div class="cd"><div><b>Taglio</b><small>prezzo chiaro</small></div><div><b>Colore</b><small>su consulenza</small></div><div><b>Barba</b><small>su appuntamento</small></div></div>
+            <div class="cd"><div><i>✂️</i><b>Taglio</b><small>prezzo chiaro</small></div><div><i>🎨</i><b>Colore</b><small>su consulenza</small></div><div><i>🧔</i><b>Barba</b><small>su appuntamento</small></div></div>
           </div>
         </div>
         <div class="layer before">
