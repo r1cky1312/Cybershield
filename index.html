@@ -213,6 +213,33 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-s
   .wa span{display:none}
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+
+/* PAGAMENTI + POPUP */
+.pay-row{justify-content:center;margin-bottom:0}
+.btn-pay{display:inline-flex;align-items:center;gap:18px;padding:22px 38px;min-width:min(100%,420px);justify-content:center;border-radius:18px;background:linear-gradient(135deg,#ffd140,#ffb300);color:#0a2a66;text-decoration:none;box-shadow:0 16px 44px -12px rgba(255,196,57,.65),inset 0 1px 0 rgba(255,255,255,.5);transition:.25s}
+.btn-pay:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 22px 54px -12px rgba(255,196,57,.85),inset 0 1px 0 rgba(255,255,255,.5)}
+.btn-pay span{display:block;text-align:left}
+.btn-pay b{display:block;font-size:1.35rem;line-height:1.2}
+.btn-pay small{display:block;font-size:.85rem;opacity:.75;font-weight:600;margin-top:2px}
+.btn-pay .pp-ico{width:52px;height:52px;border-radius:14px;background:#0a2a66;color:#ffd140;font:italic 900 1.9rem/52px Georgia,serif;text-align:center;flex:none}
+.btn-pay .pp-arr{font-size:1.6rem;font-weight:800;transition:.25s}
+.btn-pay:hover .pp-arr{transform:translateX(5px)}
+.svc-price-sm[data-pay]{cursor:pointer}
+.pay-modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:16px;background:rgba(4,8,16,.75);backdrop-filter:blur(6px)}
+.pay-modal.open{display:flex}
+.pay-box{position:relative;width:100%;max-width:440px;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:32px 28px 26px;text-align:center;box-shadow:0 40px 90px -30px rgba(0,0,0,.9);animation:payIn .25s ease}
+@keyframes payIn{from{opacity:0;transform:translateY(14px) scale(.97)}to{opacity:1;transform:none}}
+.pay-box h3{font-size:1.3rem;margin-bottom:4px}
+.pay-box .pay-price{color:var(--accent);font-weight:800;font-size:1.05rem;margin-bottom:10px}
+.pay-box p{color:var(--muted);font-size:.9rem;margin-bottom:20px}
+.pay-box .btn{width:100%;justify-content:center;margin-top:10px;padding:15px 20px;font-size:1.02rem}
+.pay-box .btn-paypal{background:linear-gradient(135deg,#ffd140,#ffb300);color:#0a2a66}
+.pay-box .btn-paypal:hover{transform:translateY(-2px)}
+.pay-box .btn-wapay{background:#25d366;color:#04230f}
+.pay-box .btn-wapay:hover{transform:translateY(-2px)}
+.pay-x{position:absolute;top:12px;right:14px;background:none;border:0;color:var(--muted);font-size:1.6rem;cursor:pointer;line-height:1}
+.pay-x:hover{color:var(--text)}
+.pay-box .pay-note{font-size:.78rem;margin:14px 0 0}
 </style>
 </head>
 <body>
@@ -615,8 +642,8 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-s
     <span class="eyebrow">Pagamenti</span>
     <h2>Paga online in modo semplice e sicuro</h2>
     <p class="lead" style="margin:0 auto 22px">Puoi saldare il tuo servizio con PayPal in pochi secondi. Hai già concordato l'importo con noi? Clicca il pulsante e inserisci la cifra.</p>
-    <div class="cta-row">
-      <a class="btn btn-primary" id="paypalBtn" href="https://paypal.me/CyberShieldTO" target="_blank" rel="noopener noreferrer">💳 Paga con PayPal</a>
+    <div class="cta-row pay-row">
+      <a class="btn-pay" id="paypalBtn" href="https://paypal.me/CyberShieldTO" target="_blank" rel="noopener noreferrer"><span class="pp-ico">P</span><span><b>Paga con PayPal</b><small>Sicuro, veloce, in pochi secondi</small></span><span class="pp-arr">→</span></a>
     </div>
     <p style="margin:18px auto 0;max-width:560px;color:var(--muted);font-size:.9rem">Accettiamo <strong style="color:var(--text)">tutti i metodi di pagamento</strong>: dal bonifico bancario alle criptovalute. Scrivici su WhatsApp o via email e ti indichiamo i dati per il metodo che preferisci.</p>
   </div>
@@ -644,6 +671,19 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-s
     <div>&copy; 2026 CyberShield. Tutti i diritti riservati.</div>
   </div>
 </footer>
+
+
+<div class="pay-modal" id="payModal" role="dialog" aria-modal="true" aria-labelledby="payTitle">
+  <div class="pay-box">
+    <button class="pay-x" id="payClose" aria-label="Chiudi">×</button>
+    <h3 id="payTitle">Servizio</h3>
+    <div class="pay-price" id="payPrice"></div>
+    <p>Come preferisci procedere?</p>
+    <a class="btn btn-paypal" href="https://paypal.me/CyberShieldTO" target="_blank" rel="noopener noreferrer">💳 Paga con PayPal</a>
+    <a class="btn btn-wapay" id="payWa" href="https://wa.me/393792870887" target="_blank" rel="noopener noreferrer">💬 Scrivimi su WhatsApp</a>
+    <p class="pay-note">Accettiamo anche bonifico e criptovalute: scrivici e ti diamo i dati.</p>
+  </div>
+</div>
 
 <a class="wa" href="https://wa.me/393792870887?text=Ciao%2C%20vorrei%20informazioni." aria-label="Scrivici su WhatsApp">💬 <span>Scrivici</span></a>
 
@@ -715,11 +755,34 @@ const RECENSIONI=[];
   const primi=document.getElementById('primi');if(primi)primi.style.display='none';
 })();
 
-// piano scelto -> messaggio WhatsApp precompilato
-document.querySelectorAll('[data-plan]').forEach(a=>a.addEventListener('click',()=>{
-  const msg=encodeURIComponent('Ciao, sono interessato al piano "'+a.dataset.plan+'". Possiamo parlarne?');
-  document.getElementById('waMain').href='https://wa.me/393792870887?text='+msg;
-}));
+// POPUP pagamento: prezzo dei servizi e piani -> PayPal o WhatsApp
+(function(){
+  const m=document.getElementById('payModal'),t=document.getElementById('payTitle'),pr=document.getElementById('payPrice'),wa=document.getElementById('payWa');
+  const apri=(nome,prezzo)=>{
+    t.textContent=nome;pr.textContent=prezzo||'';
+    wa.href='https://wa.me/393792870887?text='+encodeURIComponent('Ciao, sono interessato a "'+nome+'"'+(prezzo?' ('+prezzo+')':'')+'. Possiamo parlarne?');
+    m.classList.add('open');
+  };
+  const chiudi=()=>m.classList.remove('open');
+  document.getElementById('payClose').addEventListener('click',chiudi);
+  m.addEventListener('click',e=>{if(e.target===m)chiudi()});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')chiudi()});
+  // piani prezzi
+  document.querySelectorAll('[data-plan]').forEach(a=>a.addEventListener('click',e=>{
+    e.preventDefault();
+    const pl=a.closest('.plan');
+    const amt=pl.querySelector('.amount').textContent.replace(/\s+/g,' ').trim();
+    apri(a.dataset.plan,amt);
+  }));
+  // prezzo "da 35€ →" sulle card dei servizi (il resto della card continua ad aprire la pagina)
+  document.querySelectorAll('.svc-card .svc-price-sm').forEach(sp=>{
+    sp.dataset.pay='1';sp.setAttribute('role','button');sp.setAttribute('tabindex','0');
+    const go=e=>{e.preventDefault();e.stopPropagation();
+      apri(sp.closest('.svc-card').querySelector('h3').textContent.trim(),sp.textContent.replace('→','').trim());};
+    sp.addEventListener('click',go);
+    sp.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' ')go(e)});
+  });
+})();
 </script>
 </body>
 </html>
