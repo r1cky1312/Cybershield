@@ -5,11 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CyberShield | Siti web veloci e sicuri per attività locali</title>
 <meta name="description" content="Realizziamo e gestiamo il sito della tua attività: veloce, sicuro, con backup e controlli automatici. Audit di sicurezza gratuito del tuo sito attuale.">
-<meta property="og:title" content="CyberShield | Siti web veloci e sicuri per attività locali">
-<meta property="og:description" content="Sito web, sicurezza e manutenzione in un unico abbonamento. Richiedi l'audit gratuito.">
-<meta property="og:type" content="website">
+<meta name="robots" content="noindex"><!-- PAGINA DI PROVA: togli questa riga quando la usi come home -->
 <meta name="theme-color" content="#070b14">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><path d='M32 4 8 14v16c0 14 10 26 24 30 14-4 24-16 24-30V14z' fill='%2338bdf8'/><path d='m22 32 7 7 14-15' stroke='%23070b14' stroke-width='6' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Jost:wght@400;500&display=swap" rel="stylesheet"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap">
 <style>
 :root{
   --bg:#070b14; --bg2:#0c1220; --card:#101a2e; --line:#1e2b45;
@@ -186,6 +185,33 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-s
 .a1 .cd{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:6px 18px 16px}
 .a1 .cd div{background:#0f1b33;border:1px solid var(--line);border-radius:10px;padding:10px;font-size:.72rem}
 .a1 .cd b{display:block;margin-bottom:2px}.a1 .cd small{color:var(--muted)}
+
+/* sito "dopo" (stile editoriale: foto reale, serif, un solo accento) */
+.cmp{container-type:inline-size}
+.a2{--a2ink:#1d1712;--a2bg:#f7f2ea;--a2ac:#b8452a;height:calc(100% - 36px);background:var(--a2bg);color:var(--a2ink);font-family:'Jost',system-ui,sans-serif;display:flex;flex-direction:column;text-align:left}
+.a2-salon{--a2ink:#111;--a2bg:#f3f3f1;--a2ac:#111}
+.a2-nav{background:var(--a2bg);display:flex;align-items:center;gap:18px;padding:12px 22px;border-bottom:1px solid rgba(0,0,0,.12)}
+.a2-nav b{font-family:'EB Garamond',Georgia,serif;font-weight:500;font-size:1.2rem;margin-right:auto;letter-spacing:-.01em}
+.a2-links{display:flex;gap:18px;font-size:.76rem}
+.a2-btn{display:inline-block;background:var(--a2ac);color:#fff;font-size:.76rem;font-weight:500;padding:9px 16px;border-radius:6px;white-space:nowrap}
+.a2-nav .a2-btn{display:none}
+.a2-hero{flex:1;display:grid;grid-template-columns:1.05fr 1fr;min-height:0}
+.a2-copy{padding:24px 24px 48px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.a2 h4{font-family:'EB Garamond',Georgia,serif;font-weight:400;font-size:2rem;line-height:1.04;letter-spacing:-.02em}
+.a2-copy p{font-size:.82rem;line-height:1.45;max-width:34ch}
+.a2-row{display:flex;align-items:center;gap:16px;margin-top:4px}
+.a2-link{font-size:.78rem;border-bottom:1px solid currentColor;padding-bottom:1px}
+.a2-facts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:auto 0 0;padding-top:12px;border-top:1px solid rgba(0,0,0,.12)}
+.a2-facts dt{font-size:.66rem;opacity:.6}.a2-facts dd{margin:0;font-size:.78rem;font-weight:500}
+.a2-photo{position:relative;min-height:0}
+.a2-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.a2-salon .a2-photo img{object-position:50% 60%}
+@container (max-width:560px){
+  .a2-nav{padding:10px 14px}.a2-links{display:none}.a2-nav .a2-btn{display:none}
+  .a2-hero{grid-template-columns:1fr;grid-template-rows:140px 1fr}
+  .a2-photo{order:-1}
+  .a2-copy{padding:14px 16px 40px;gap:7px}.a2 h4{font-size:1.45rem}.a2-copy p{font-size:.76rem}.a2-facts{display:none}
+}
 .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;max-width:860px;margin:18px auto 0;text-align:left}
 .stats div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
 .stats small{display:block;color:var(--muted);font-size:.76rem}
@@ -241,16 +267,75 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-s
 .pay-x{position:absolute;top:12px;right:14px;background:none;border:0;color:var(--muted);font-size:1.6rem;cursor:pointer;line-height:1}
 .pay-x:hover{color:var(--text)}
 .pay-box .pay-note{font-size:.78rem;margin:14px 0 0}
+
+/* ============ PROVA 3D: aspetto + hero a scorrimento ============ */
+:root{--display:'Space Grotesk','Inter','Segoe UI',system-ui,sans-serif;--hh:68px;color-scheme:dark}
+body{font-family:'Inter','Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text)}
+h1,h2,h3,.logo{font-family:var(--display)}
+h2{font-size:clamp(2rem,4.4vw,3.2rem);font-weight:700;letter-spacing:-.03em}
+section{padding:96px 0}
+header{top:env(safe-area-inset-top,0px)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--bg)}
+.wa{bottom:calc(18px + env(safe-area-inset-bottom,0px));right:calc(18px + env(safe-area-inset-right,0px))}
+.btn-primary{box-shadow:0 10px 34px -8px rgba(56,189,248,.6)}
+.card,.step,.rev{position:relative;overflow:hidden;background:linear-gradient(165deg,rgba(255,255,255,.055),rgba(255,255,255,.012) 62%),var(--card)}
+.card::after{content:"";position:absolute;inset:0;background:radial-gradient(420px circle at var(--mx,50%) var(--my,0%),rgba(56,189,248,.15),transparent 55%);opacity:0;transition:opacity .3s;pointer-events:none}
+.card:hover::after{opacity:1}
+.sx-prog{position:fixed;top:env(safe-area-inset-top,0px);left:0;height:3px;width:0;background:linear-gradient(90deg,var(--accent),#a78bfa,var(--accent2));z-index:70}
+
+/* hero a scorrimento */
+.sx-pin{position:relative;height:520vh}
+.sx-in{position:sticky;top:var(--hh);height:calc(100vh - var(--hh));height:calc(100svh - var(--hh));min-height:540px;overflow:hidden;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.12fr);background:
+  radial-gradient(60% 70% at 78% 40%,rgba(99,102,241,.22),transparent 70%),
+  radial-gradient(40% 50% at 8% 90%,rgba(56,189,248,.10),transparent 70%)}
+.sx-copy{position:relative;padding-left:max(22px,calc((100vw - 1120px)/2 + 22px));padding-right:12px;min-width:0}
+.sx-cp{position:absolute;inset:0;padding-left:inherit;padding-right:inherit;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;opacity:0;visibility:hidden;will-change:transform,opacity}
+.sx-hero{opacity:1;visibility:visible}
+.sx-hero h1{font-size:clamp(2.3rem,4.6vw,4.2rem);font-weight:700;line-height:1.04;letter-spacing:-.035em;margin-bottom:20px;max-width:12.5em;text-wrap:balance}
+.sx-hero .lead{margin-bottom:28px}
+.sx-hint{margin-top:34px;display:flex;align-items:center;gap:12px;color:var(--muted);font-size:.85rem;letter-spacing:.04em}
+.sx-hint span{display:block;width:1.5px;height:38px;background:linear-gradient(var(--accent),transparent);animation:sxdrop 1.8s ease-in-out infinite;transform-origin:top}
+@keyframes sxdrop{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+.sx-step h2,.sx-fin h2{font-size:clamp(2rem,3.8vw,3.4rem);font-weight:700;line-height:1.05;margin:10px 0 16px;max-width:9em;text-wrap:balance}
+.sx-step p,.sx-fin p{color:var(--muted);font-size:1.12rem;max-width:30em}
+.sx-fin .cta-row{margin-top:26px;margin-bottom:0}
+.sx-rail{position:absolute;left:max(22px,calc((100vw - 1120px)/2 + 22px));bottom:28px;display:flex;gap:8px}
+.sx-dot{display:block;width:30px;height:4px;border-radius:2px;background:rgba(255,255,255,.16);transition:background .3s,width .3s}
+.sx-dot.on{background:var(--accent);width:46px}
+.sx-stage{position:relative;min-width:0}
+.sx-stage canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+
+@media(max-width:899px){
+  .sx-in{display:block;min-height:0}
+  .sx-stage{position:absolute;left:0;right:0;top:0;height:47%}
+  .sx-copy{position:absolute;left:0;right:0;bottom:0;height:53%;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+  .sx-cp{justify-content:flex-start;padding-top:6px}
+  .sx-hero h1{font-size:clamp(1.7rem,7.4vw,2.4rem);margin-bottom:12px}
+  .sx-hero .lead{font-size:.95rem;margin-bottom:16px;line-height:1.5}
+  .sx-hero .trust,.sx-hint{display:none}
+  .sx-hero .badge{margin-bottom:12px;font-size:.74rem;padding:5px 12px}
+  .sx-hero .cta-row{margin-bottom:0}
+  .sx-hero .btn{padding:11px 18px;font-size:.9rem}
+  .sx-step h2,.sx-fin h2{font-size:clamp(1.7rem,7vw,2.2rem);margin:6px 0 10px}
+  .sx-step p,.sx-fin p{font-size:1rem;line-height:1.5}
+  .sx-rail{left:max(20px,env(safe-area-inset-left,0px));bottom:16px}
+  .sx-pin{height:460vh}
+}
+
+/* senza JavaScript o con "riduci animazioni": tutto leggibile, senza scorrimento guidato */
+html:not(.js) .sx-pin,.rm .sx-pin{height:auto}
+html:not(.js) .sx-in,.rm .sx-in{position:relative;top:0;height:auto;min-height:0;display:block;overflow:visible;padding-bottom:40px}
+html:not(.js) .sx-copy,.rm .sx-copy{position:static;height:auto;padding:36px max(22px,calc((100vw - 1120px)/2 + 22px)) 0}
+html:not(.js) .sx-cp,.rm .sx-cp{position:static;opacity:1!important;visibility:visible!important;transform:none!important;padding:0;margin-bottom:34px;pointer-events:auto!important}
+html:not(.js) .sx-stage{display:none}
+.rm .sx-stage{position:relative;height:420px;left:auto;right:auto;top:auto}
+html:not(.js) .sx-rail,.rm .sx-rail,html:not(.js) .sx-hint,.rm .sx-hint{display:none}
+@media(prefers-reduced-motion:reduce){.sx-hint span{animation:none}}
+
 </style>
-<!-- Vercel Web Analytics -->
-<script>
-  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-</script>
-<script defer src="/_vercel/insights/script.js"></script>
-<!-- End Vercel Web Analytics -->
 </head>
 <body>
-
+<script>document.documentElement.classList.add('js');if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('rm');</script>
 <header>
   <div class="wrap nav">
     <a href="#" class="logo">
@@ -274,40 +359,60 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-s
 
 <main>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <div class="badge"><span class="dot"></span> Per ristoranti, studi, negozi e artigiani</div>
-      <h1>Il sito della tua attività, <span class="grad">veloce, sicuro e sempre online.</span></h1>
-      <p class="lead">Lo creiamo, lo proteggiamo e lo teniamo aggiornato noi. Tu pensi ai clienti, non ad hosting, backup e hacker.</p>
-      <div class="cta-row">
-        <a class="btn btn-primary" href="#audit">Richiedi l'audit gratuito →</a>
-        <a class="btn btn-ghost" href="#prezzi">Vedi i prezzi</a>
+<div class="sx-prog" id="sxProg"></div>
+<section class="sx-pin" id="sxPin" aria-label="Cosa include il servizio">
+  <div class="sx-in" id="sxIn">
+    <div class="sx-copy">
+      <div class="sx-cp sx-hero" id="sxHero">
+        <div class="badge"><span class="dot"></span> Per ristoranti, studi, negozi e artigiani</div>
+        <h1>Il sito della tua attività, <span class="grad">veloce, sicuro e sempre online.</span></h1>
+        <p class="lead">Lo creiamo, lo proteggiamo e lo teniamo aggiornato noi. Tu pensi ai clienti, non ad hosting, backup e hacker.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#audit">Richiedi l'audit gratuito →</a>
+          <a class="btn btn-ghost" href="#prezzi">Vedi i prezzi</a>
+        </div>
+        <div class="trust">
+          <span>Prezzi chiari</span>
+          <span>Nessun vincolo lungo</span>
+          <span>Assistenza su WhatsApp</span>
+        </div>
+        <div class="sx-hint" id="sxHint"><span></span>Scorri per vedere cosa include</div>
       </div>
-      <div class="trust">
-        <span>Prezzi chiari</span>
-        <span>Nessun vincolo lungo</span>
-        <span>Assistenza su WhatsApp</span>
-      </div>
-    </div>
 
-    <div class="term rv" aria-label="Esempio di report di sicurezza">
-      <div class="term-bar"><i style="background:#fb7185"></i><i style="background:#fbbf24"></i><i style="background:#22d3a6"></i>&nbsp; report-sicurezza.sito
+      <div class="sx-cp sx-step" id="sxStep0">
+        <span class="eyebrow">Livello 1 di 4</span>
+        <h2>Sito veloce e responsive</h2>
+        <p>Pagine leggere, pensate per smartphone, con pulsanti per chiamare, scrivere su WhatsApp e raggiungerti con le indicazioni stradali.</p>
       </div>
-      <div class="term-body">
-        <div class="row"><span>HTTPS / certificato SSL</span><span class="ok">● attivo</span></div>
-        <div class="row"><span>Header di sicurezza</span><span class="ok">● configurati</span></div>
-        <div class="row"><span>Backup giornaliero</span><span class="ok">● eseguito</span></div>
-        <div class="row"><span>Plugin / librerie aggiornate</span><span class="mid">● 1 da aggiornare</span></div>
-        <div class="row"><span>Controllo disponibilità</span><span class="ok">● online</span></div>
-        <div class="row"><span>Velocità mobile</span><span class="ok">● 96 / 100</span></div>
-        <div class="score">
-          <big id="scoreNum">0</big>
-          <div style="flex:1"><div style="font-size:.78rem;color:var(--muted);margin-bottom:6px">Punteggio salute del sito</div><div class="bar"><div id="scoreBar"></div></div></div>
+      <div class="sx-cp sx-step" id="sxStep1">
+        <span class="eyebrow">Livello 2 di 4</span>
+        <h2>Sicurezza</h2>
+        <p>HTTPS, header di sicurezza e aggiornamenti: le protezioni di base che un sito trascurato non ha.</p>
+      </div>
+      <div class="sx-cp sx-step" id="sxStep2">
+        <span class="eyebrow">Livello 3 di 4</span>
+        <h2>Backup e ripristino</h2>
+        <p>Copie regolari del sito. Se qualcosa si rompe, ripristiniamo noi.</p>
+      </div>
+      <div class="sx-cp sx-step" id="sxStep3">
+        <span class="eyebrow">Livello 4 di 4</span>
+        <h2>Controllo online</h2>
+        <p>Un sistema verifica ogni pochi minuti che il sito risponda. Se va giù, ti avvisiamo e interveniamo.</p>
+      </div>
+
+      <div class="sx-cp sx-fin" id="sxFinal">
+        <span class="eyebrow">Tutto insieme</span>
+        <h2>Un unico referente per il tuo sito.</h2>
+        <p>Sito, sicurezza e visibilità locale in un posto solo.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#audit">Richiedi l'audit gratuito →</a>
+          <a class="btn btn-ghost" href="#prezzi">Vedi i prezzi</a>
         </div>
       </div>
+
+      <div class="sx-rail" aria-hidden="true"><i class="sx-dot"></i><i class="sx-dot"></i><i class="sx-dot"></i><i class="sx-dot"></i></div>
     </div>
+    <div class="sx-stage"><canvas id="sxCanvas" role="img" aria-label="Scudo composto da quattro livelli: sito, sicurezza, backup e controllo online"></canvas></div>
   </div>
 </section>
 
@@ -435,8 +540,8 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-s
     <p class="lead">Due esempi dimostrativi, con attività inventate, per farti vedere che tipo di intervento facciamo. Trascina la linea per confrontare.</p>
 
     <div class="tabs" role="tablist" aria-label="Scegli l'esempio">
-      <button class="tab on" role="tab" aria-selected="true" data-case="a">🍝 Ristorante</button>
-      <button class="tab" role="tab" aria-selected="false" data-case="b">✂️ Parrucchiere</button>
+      <button class="tab on" role="tab" aria-selected="true" data-case="a">Ristorante</button>
+      <button class="tab" role="tab" aria-selected="false" data-case="b">Parrucchiere</button>
     </div>
 
     <!-- caso A -->
@@ -444,14 +549,17 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-s
       <div class="cmp">
         <div class="layer after">
           <div class="abar good">🔒 trattoriaesempio.it</div>
-          <div class="a1">
-            <div class="nv"><b>Trattoria Esempio</b><span>Menù · Orari · Dove siamo</span></div>
-            <div class="hr">
-              <h4>Cucina tipica, <em>a due passi da te</em></h4>
-              <p>Aperti ogni giorno 12–15 e 19–23. Prenota con un tocco.</p>
-              <div class="bt"><span class="p">📞 Chiama</span><span class="g">💬 WhatsApp</span><span class="o">📍 Indicazioni</span></div>
+          <div class="a2 a2-tratt">
+            <div class="a2-nav"><b>Trattoria Esempio</b><div class="a2-links"><span>Menù</span><span>Orari</span><span>Dove siamo</span></div><span class="a2-btn">Prenota un tavolo</span></div>
+            <div class="a2-hero">
+              <div class="a2-copy">
+                <h4>Pizza e cucina tipica, cotte nel forno a legna</h4>
+                <p>Aperti ogni giorno a pranzo e a cena. Prenoti in due tocchi o ci scrivi su WhatsApp.</p>
+                <div class="a2-row"><span class="a2-btn">Prenota un tavolo</span><span class="a2-link">Vedi il menù</span></div>
+                <dl class="a2-facts"><div><dt>Oggi</dt><dd>12–15 · 19–23</dd></div><div><dt>Menù</dt><dd>Aggiornato ogni settimana</dd></div></dl>
+              </div>
+              <div class="a2-photo"><img src="assets/img/trattoria-forno.webp" alt="Forno a legna acceso in una pizzeria" loading="lazy" width="960" height="720"></div>
             </div>
-            <div class="cd"><div><b>Antipasti</b><small>menù aggiornato</small></div><div><b>Primi</b><small>pasta fresca</small></div><div><b>Dolci</b><small>fatti in casa</small></div></div>
           </div>
         </div>
         <div class="layer before">
@@ -481,14 +589,17 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-s
       <div class="cmp">
         <div class="layer after">
           <div class="abar good">🔒 saloneesempio.it</div>
-          <div class="a1">
-            <div class="nv"><b>Salone Esempio</b><span>Servizi · Prezzi · Prenota</span></div>
-            <div class="hr">
-              <h4>Il tuo taglio, <em>senza attese</em></h4>
-              <p>Prenota su WhatsApp in pochi secondi. Orari e prezzi sempre aggiornati.</p>
-              <div class="bt"><span class="p">📅 Prenota</span><span class="g">💬 WhatsApp</span><span class="o">📍 Come arrivare</span></div>
+          <div class="a2 a2-salon">
+            <div class="a2-nav"><b>Salone Esempio</b><div class="a2-links"><span>Servizi</span><span>Prezzi</span><span>Come arrivare</span></div><span class="a2-btn">Prenota un taglio</span></div>
+            <div class="a2-hero">
+              <div class="a2-copy">
+                <h4>Taglio, colore e barba, senza attese</h4>
+                <p>Scegli il giorno e l'ora e ti rispondiamo su WhatsApp. Prezzi e orari sempre aggiornati.</p>
+                <div class="a2-row"><span class="a2-btn">Prenota un taglio</span><span class="a2-link">Vedi i prezzi</span></div>
+                <dl class="a2-facts"><div><dt>Oggi</dt><dd>9–19</dd></div><div><dt>Prezzi</dt><dd>Chiari, online</dd></div></dl>
+              </div>
+              <div class="a2-photo"><img src="assets/img/salone-barbiere.webp" alt="Due poltrone in un salone, con specchi e piano di lavoro" loading="lazy" width="960" height="720"></div>
             </div>
-            <div class="cd"><div><b>Taglio</b><small>prezzo chiaro</small></div><div><b>Colore</b><small>su consulenza</small></div><div><b>Barba</b><small>su appuntamento</small></div></div>
           </div>
         </div>
         <div class="layer before">
@@ -678,11 +789,12 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-s
 
 </main>
 
+
 <footer>
   <div class="wrap foot">
     <div><strong style="color:var(--text)">CyberShield</strong> — Siti web e sicurezza per attività locali</div>
     <div><a href="https://wa.me/393792870887">WhatsApp</a> · <a href="mailto:infocybershield5@gmail.com">Email</a></div>
-    <div>&copy; 2026 CyberShield. Tutti i diritti riservati.</div>
+    <div>&copy; 2026 CyberShield. Tutti i diritti riservati. <span style="opacity:.7">Foto degli esempi da Wikimedia Commons (D. Pugliesi, CC BY-SA 4.0; Wilfredor, CC0).</span></div>
   </div>
 </footer>
 
@@ -709,15 +821,6 @@ menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classL
 // reveal on scroll
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
-
-// animated score
-(function(){
-  const n=document.getElementById('scoreNum'),b=document.getElementById('scoreBar');
-  const target=94;let cur=0;
-  setTimeout(()=>{b.style.width=target+'%';
-    const t=setInterval(()=>{cur++;n.textContent=cur;if(cur>=target)clearInterval(t)},16);
-  },500);
-})();
 
 // tab degli esempi prima/dopo
 document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{
@@ -796,6 +899,243 @@ const RECENSIONI=[];
     sp.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' ')go(e)});
   });
 })();
+// barra di avanzamento + riflesso sulle card
+(function(){
+  const bar=document.getElementById('sxProg');let tk=false;
+  const upd=()=>{tk=false;const h=document.documentElement.scrollHeight-innerHeight;if(bar)bar.style.width=(h>0?100*scrollY/h:0)+'%'};
+  addEventListener('scroll',()=>{if(!tk){tk=true;requestAnimationFrame(upd)}},{passive:true});upd();
+  document.querySelectorAll('.card').forEach(c=>c.addEventListener('pointermove',e=>{const r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px')}));
+})();
+
 </script>
+<script>
+/* Scudo a 4 livelli: disegno 3D in canvas 2D, guidato dallo scorrimento della pagina. Nessuna libreria. */
+(function(){
+'use strict';
+var pin=document.getElementById('sxPin'), cv=document.getElementById('sxCanvas');
+if(!pin||!cv||!cv.getContext)return;
+var ctx=cv.getContext('2d');
+var root=document.documentElement;
+var RM=!!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches);
+if(RM)root.classList.add('rm');
+
+var N=4, T=0.22, HH=68;
+var HUE=[160,268,238,199];               /* dal basso: controllo, backup, sicurezza, sito */
+var LAB=['Controllo online','Backup','Sicurezza','Sito'];
+var ONE=function(v){return v<0?0:v>1?1:v}, LERP=function(a,b,t){return a+(b-a)*t};
+var SM=function(x){x=ONE(x);return x*x*(3-2*x)};
+
+/* contorno dello scudo (stesso disegno del logo), y verso l'alto */
+function bez(p0,p1,p2,p3,n){var o=[];for(var i=1;i<=n;i++){var t=i/n,u=1-t;o.push([u*u*u*p0[0]+3*u*u*t*p1[0]+3*u*t*t*p2[0]+t*t*t*p3[0],u*u*u*p0[1]+3*u*u*t*p1[1]+3*u*t*t*p2[1]+t*t*t*p3[1]])}return o}
+var raw=[[32,4],[8,14],[8,30]].concat(bez([8,30],[8,44],[18,56],[32,60],16),bez([32,60],[46,56],[56,44],[56,30],16),[[56,14]]);
+var SH=raw.map(function(p){return [(p[0]-32)/26,-(p[1]-32)/26]});
+var NS=SH.length;
+
+var W=0,H=0,dpr=1;
+function resize(){
+  dpr=Math.min(window.devicePixelRatio||1,2);
+  W=cv.clientWidth;H=cv.clientHeight;
+  cv.width=Math.max(1,Math.round(W*dpr));cv.height=Math.max(1,Math.round(H*dpr));
+}
+
+/* elementi di testo */
+var $=function(id){return document.getElementById(id)};
+var heroCp=$('sxHero'), finCp=$('sxFinal'), stepCp=[0,1,2,3].map(function(i){return $('sxStep'+i)});
+var dots=[].slice.call(document.querySelectorAll('.sx-dot')), hint=$('sxHint');
+
+var mx=0,my=0,tmx=0,tmy=0;
+var inEl=$('sxIn');
+if(inEl&&!('ontouchstart' in window)){
+  inEl.addEventListener('pointermove',function(e){var r=inEl.getBoundingClientRect();tmx=(e.clientX-r.left)/r.width*2-1;tmy=(e.clientY-r.top)/r.height*2-1});
+  inEl.addEventListener('pointerleave',function(){tmx=0;tmy=0});
+}
+
+function hsl(h,s,l,a){return 'hsla('+h+','+s+'%,'+l+'%,'+(a==null?1:a)+')'}
+
+function render(p,t){
+  ctx.setTransform(dpr,0,0,dpr,0,0);
+  ctx.clearRect(0,0,W,H);
+  ctx.lineJoin='round';ctx.lineCap='round';
+
+  var ex=SM((p-0.08)/0.14), endEx=SM((p-0.90)/0.10), expl=ex*(1-0.85*endEx);
+  var gap=0.05+0.64*expl;
+  var E=LERP(1.02,0.80,expl)+my*0.05;
+  var th=-0.62+t*0.14+p*2.0+mx*0.30;
+  var c=Math.cos(th), s=Math.sin(th), sE=Math.sin(E), cE=Math.cos(E);
+  var total=N*T+(N-1)*gap;
+  var sc=Math.min(H*0.70/(2.45*sE+total*cE), W/3.9);
+  /* il gruppo scudo + etichette deve stare dentro la tela: ricalcolo la scala in base al testo */
+  for(var it=0;it<2;it++){
+    var fs0=Math.max(12,Math.min(20,sc*0.115));
+    sc=Math.min(sc,(W-26-fs0*10.8)/2.4);
+  }
+  var fs1=Math.max(12,Math.min(20,sc*0.115));
+  var cx=Math.min(W*0.40, W-16-sc*1.3-fs1*10.8, W*0.5), cy=H*0.48+sc*0.04;
+  cx=Math.max(cx, sc*1.08+8);
+
+  /* passi della storia: il passo i corrisponde al livello N-1-i (si parte dall'alto) */
+  var spRaw=(p-0.22)/0.68*4, act=[0,0,0,0];
+  for(var i=0;i<4;i++){act[N-1-i]=SM(1-Math.abs(spRaw-(i+0.5))*1.4)}
+
+  function PT(x,y,z){var xr=x*c-y*s, yr=x*s+y*c;return [cx+sc*xr, cy-sc*(yr*sE+z*cE)]}
+  function plane(z){ctx.setTransform(dpr*sc*c, -dpr*sc*s*sE, -dpr*sc*s, -dpr*sc*c*sE, dpr*cx, dpr*(cy-sc*z*cE))}
+  function reset(){ctx.setTransform(dpr,0,0,dpr,0,0)}
+  function shield(k){ctx.beginPath();for(var i=0;i<NS;i++){var x=SH[i][0]*k,y=SH[i][1]*k;i?ctx.lineTo(x,y):ctx.moveTo(x,y)}ctx.closePath()}
+
+  /* alone a terra */
+  var gz=-total/2-0.45, gp=PT(0,0,gz);
+  ctx.save();ctx.translate(gp[0],gp[1]);ctx.scale(1,0.38);
+  var gg=ctx.createRadialGradient(0,0,0,0,0,sc*1.5);
+  gg.addColorStop(0,'rgba(56,189,248,'+(0.20+0.10*expl)+')');gg.addColorStop(1,'rgba(56,189,248,0)');
+  ctx.fillStyle=gg;ctx.beginPath();ctx.arc(0,0,sc*1.5,0,6.2832);ctx.fill();ctx.restore();
+
+  var anyAct=Math.max(act[0],act[1],act[2],act[3]);
+  var tops=[];
+  for(var k=0;k<N;k++){
+    var h=HUE[k];
+    var z0=-total/2+k*(T+gap)+act[k]*0.10*expl, zt=z0+T;
+    var dim=expl*(1-act[k])*anyAct*0.5;
+    var Sat=78-18*dim, Lt=54-16*dim;
+
+    /* ombra sul livello sotto */
+    if(k>0){
+      var zb=-total/2+(k-1)*(T+gap)+act[k-1]*0.10*expl+T;
+      plane(zb);ctx.save();ctx.translate(0.07,-0.07);shield(1);ctx.restore();
+      ctx.fillStyle='rgba(2,6,16,'+(0.14+0.26*expl)+')';ctx.fill();reset();
+    }
+
+    /* fianchi */
+    var minx=1e9,maxx=-1e9,miny=1e9,maxy=-1e9;
+    for(var i=0;i<NS;i++){
+      var a=SH[i], b=SH[(i+1)%NS];
+      var ex_=b[0]-a[0], ey_=b[1]-a[1], len=Math.hypot(ex_,ey_)||1;
+      var nx=ey_/len, ny=-ex_/len;
+      var nxr=nx*c-ny*s, nyr=nx*s+ny*c;
+      var p0=PT(a[0],a[1],zt);
+      if(p0[0]<minx)minx=p0[0];if(p0[0]>maxx)maxx=p0[0];if(p0[1]<miny)miny=p0[1];if(p0[1]>maxy)maxy=p0[1];
+      if(nyr>=0)continue;                       /* lato non visibile */
+      var br=ONE((nxr*-0.55+nyr*-0.83)*0.5+0.5);
+      var col=hsl(h,Sat-8,LERP(22,50,br)-6*dim);
+      var q0=PT(a[0],a[1],z0),q1=PT(b[0],b[1],z0),q2=PT(b[0],b[1],zt),q3=PT(a[0],a[1],zt);
+      ctx.beginPath();ctx.moveTo(q0[0],q0[1]);ctx.lineTo(q1[0],q1[1]);ctx.lineTo(q2[0],q2[1]);ctx.lineTo(q3[0],q3[1]);ctx.closePath();
+      ctx.fillStyle=col;ctx.fill();ctx.strokeStyle=col;ctx.lineWidth=0.7;ctx.stroke();
+    }
+
+    /* faccia superiore */
+    plane(zt);shield(1);
+    if(act[k]>0.02){ctx.shadowColor=hsl(h,95,62,0.85*act[k]);ctx.shadowBlur=36*dpr*act[k];}
+    ctx.fillStyle=hsl(h,Sat,Lt);ctx.fill();
+    ctx.shadowBlur=0;ctx.shadowColor='transparent';
+    ctx.save();plane(zt);shield(1);ctx.clip();reset();
+    var gr=ctx.createLinearGradient(minx,miny,maxx,maxy);
+    gr.addColorStop(0,hsl(h,Sat+6,Lt+22));gr.addColorStop(0.5,hsl(h,Sat,Lt));gr.addColorStop(1,hsl(h,Sat-4,Lt-18));
+    ctx.fillStyle=gr;ctx.fillRect(minx-4,miny-4,maxx-minx+8,maxy-miny+8);
+    var gl=ctx.createLinearGradient(minx,miny,minx+(maxx-minx)*0.9,miny+(maxy-miny)*0.55);
+    gl.addColorStop(0,'rgba(255,255,255,0.34)');gl.addColorStop(0.42,'rgba(255,255,255,0.06)');gl.addColorStop(0.43,'rgba(255,255,255,0)');gl.addColorStop(1,'rgba(0,0,0,0.10)');
+    ctx.fillStyle=gl;ctx.fillRect(minx-4,miny-4,maxx-minx+8,maxy-miny+8);
+    ctx.restore();
+
+    /* bordo e rientranza */
+    plane(zt);shield(1);ctx.strokeStyle='rgba(255,255,255,0.55)';ctx.lineWidth=0.022;ctx.stroke();
+    shield(0.86);ctx.strokeStyle='rgba(255,255,255,0.20)';ctx.lineWidth=0.016;ctx.stroke();
+
+    /* simbolo inciso */
+    ctx.lineWidth=0.11;
+    if(k===3){ctx.strokeStyle='rgba(5,14,30,0.92)';ctx.lineWidth=0.15;ctx.beginPath();ctx.moveTo(-0.385,0);ctx.lineTo(-0.115,-0.27);ctx.lineTo(0.423,0.31);ctx.stroke();}
+    else if(k===2){ctx.strokeStyle='rgba(255,255,255,0.92)';ctx.fillStyle='rgba(255,255,255,0.92)';ctx.lineWidth=0.085;
+      ctx.beginPath();ctx.arc(0,0.07,0.17,Math.PI,0);ctx.stroke();
+      ctx.beginPath();ctx.moveTo(-0.27,-0.33);ctx.lineTo(0.27,-0.33);ctx.lineTo(0.27,0.07);ctx.lineTo(-0.27,0.07);ctx.closePath();ctx.fill();
+      ctx.fillStyle=hsl(h,Sat,Lt-12);ctx.beginPath();ctx.arc(0,-0.12,0.05,0,6.2832);ctx.fill();}
+    else if(k===1){ctx.fillStyle='rgba(255,255,255,0.92)';
+      ctx.beginPath();ctx.arc(-0.17,-0.04,0.15,0,6.2832);ctx.arc(0.04,0.08,0.22,0,6.2832);ctx.arc(0.25,-0.05,0.14,0,6.2832);ctx.fill();
+      ctx.fillRect(-0.17,-0.19,0.42,0.15);}
+    else{ctx.strokeStyle='rgba(255,255,255,0.92)';ctx.lineWidth=0.09;
+      ctx.beginPath();ctx.moveTo(-0.40,-0.02);ctx.lineTo(-0.18,-0.02);ctx.lineTo(-0.08,0.27);ctx.lineTo(0.06,-0.30);ctx.lineTo(0.16,-0.02);ctx.lineTo(0.40,-0.02);ctx.stroke();}
+    reset();
+    tops.push({k:k,zm:(z0+zt)/2,a:act[k]});
+  }
+
+  /* etichette a destra dello scudo */
+  var fs=Math.max(12,Math.min(20,sc*0.115)), lx=cx+sc*1.3, vis=ONE((expl-0.25)/0.5);
+  if(vis>0.01){
+    ctx.font='600 '+fs+'px "Space Grotesk","Inter","Segoe UI",system-ui,sans-serif';ctx.textBaseline='middle';
+    for(var j=tops.length-1;j>=0;j--){
+      var o=tops[j], pm=PT(0,0,o.zm), y=pm[1], num=N-o.k, al=vis*(0.45+0.55*Math.max(o.a,anyAct<0.05?0.6:0));
+      var hh=HUE[o.k];
+      ctx.strokeStyle=hsl(hh,90,70,0.5*al);ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(cx+sc*1.02,y);ctx.lineTo(lx-fs*1.6,y);ctx.stroke();
+      ctx.fillStyle=hsl(hh,90,70,al);ctx.beginPath();ctx.arc(cx+sc*1.02,y,3,0,6.2832);ctx.fill();
+      ctx.fillStyle=hsl(hh,90,70,al*(0.3+0.7*o.a+0.2));ctx.beginPath();ctx.arc(lx-fs*0.7,y,fs*0.62,0,6.2832);ctx.fill();
+      ctx.fillStyle='rgba(5,10,22,'+al+')';ctx.textAlign='center';ctx.fillText(String(num),lx-fs*0.7,y+1);
+      ctx.fillStyle='rgba(232,238,251,'+al+')';ctx.textAlign='left';ctx.fillText(LAB[o.k],lx+fs*0.2,y+1);
+    }
+  }
+  return {act:act,expl:expl};
+}
+
+/* testi guidati dallo scorrimento */
+function layout(p,info){
+  var heroO=1-SM((p-0.03)/0.10);
+  setCp(heroCp,heroO,-40*(1-heroO));
+  var sp=(p-0.22)/0.68*4;
+  for(var i=0;i<4;i++){
+    var a=SM(1-Math.abs(sp-(i+0.5))*1.25);
+    var side=sp<i+0.5?1:-1;
+    setCp(stepCp[i],a,side*26*(1-a));
+  }
+  var fo=SM((p-0.93)/0.06);
+  setCp(finCp,fo,22*(1-fo));
+  var cur=ONE((sp)/4)*4, ai=Math.max(0,Math.min(3,Math.floor(sp)));
+  dots.forEach(function(d,i){d.classList.toggle('on',i===ai&&sp>-0.2&&sp<4.2)});
+  if(hint)hint.style.opacity=1-SM((p-0.01)/0.05);
+}
+function setCp(el,o,dy){
+  if(!el)return;
+  el.style.opacity=o.toFixed(3);
+  el.style.transform='translateY('+dy.toFixed(1)+'px)';
+  el.style.pointerEvents=o>0.5?'auto':'none';
+  el.style.visibility=o<0.01?'hidden':'visible';
+}
+
+/* progresso di scorrimento della sezione */
+function target(){
+  if(RM)return 0.5;
+  var r=pin.getBoundingClientRect(), inn=inEl?inEl.offsetHeight:window.innerHeight;
+  var span=Math.max(1,r.height-inn);
+  return ONE((HH-r.top)/span);
+}
+
+var pd=-1, running=false, visible=true, tNow=0, over=null;
+function frame(now){
+  running=false;
+  if(!visible&&!over)return;
+  var tp=over?over.p:target();
+  pd=(pd<0||RM||over)?tp:pd+(tp-pd)*0.16;
+  if(Math.abs(tp-pd)<0.0004)pd=tp;
+  mx+=(tmx-mx)*0.06;my+=(tmy-my)*0.06;
+  tNow=over?over.t:(RM?0:now/1000);
+  var info=render(pd,tNow);
+  layout(pd,info);
+  if(!over&&!RM)kick();
+}
+function kick(){if(!running){running=true;requestAnimationFrame(frame)}}
+
+function init(){
+  resize();
+  root.classList.add('js');
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(es){visible=es[0].isIntersecting;if(visible)kick()},{rootMargin:'120px'}).observe(pin);
+  }
+  if('ResizeObserver' in window){new ResizeObserver(function(){resize();pd=-1;kick()}).observe(cv)}
+  else window.addEventListener('resize',function(){resize();kick()});
+  window.addEventListener('scroll',kick,{passive:true});
+  kick();
+}
+/* per le prove: disegna un frame esatto */
+window.__sx={set:function(p,t){over={p:p,t:t||0};resize();frame(0);},release:function(){over=null;kick()}};
+init();
+})();
+
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
