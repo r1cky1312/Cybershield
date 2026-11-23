@@ -1,0 +1,36 @@
+# --- Segreti e credenziali: NON caricare mai su GitHub ---
+.env
+*.env
+!env.esempio
+*_app_password*
+secrets*
+credenziali*
+
+# --- Dati dei clienti (riservati) ---
+Contatti_*.xlsx
+*Organizer*.xlsx
+pdf/
+report/
+risultati*.csv
+*.json
+!assets/**/*.json
+
+# --- Ambienti virtuali e cache ---
+venv/
+.venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+
+# --- Build / pacchetti ---
+*.spec
+build/
+dist/
+*.exe
+
+# --- Locali, non da pubblicare ---
+backup_prima_traduzione/
+.voce_cache/
+*.mp4
