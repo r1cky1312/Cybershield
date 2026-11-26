@@ -14,6 +14,7 @@ report/
 risultati*.csv
 *.json
 !assets/**/*.json
+!vercel.json
 
 # --- Ambienti virtuali e cache ---
 venv/
@@ -34,3 +35,11 @@ dist/
 backup_prima_traduzione/
 .voce_cache/
 *.mp4
+
+# --- Cartelle di lavoro (non fanno parte del sito pubblico) ---
+archivio/
+dati/
+documenti/
+email/
+strumenti/
+video/
